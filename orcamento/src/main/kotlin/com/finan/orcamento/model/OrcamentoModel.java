@@ -16,7 +16,7 @@ public class OrcamentoModel implements Serializable {
     private Long id;
 
     @Column(name = "quantidade_itens")
-    private int quantidadeItens;
+    private int qtdItens;
 
     @NotNull
     @Column(name = "valor_orcamento")
@@ -26,7 +26,7 @@ public class OrcamentoModel implements Serializable {
     private BigDecimal descontoOrcamento;
 
     public void setQuantidadeItens(int quantidadeItens) {
-        this.quantidadeItens = quantidadeItens;
+        this.qtdItens = quantidadeItens;
     }
 
     public void setValorOrcamento(BigDecimal valorOrcamento) {
