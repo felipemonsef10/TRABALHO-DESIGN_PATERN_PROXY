@@ -22,8 +22,8 @@ public class OrcamentoModel implements Serializable {
     @Column(name = "valor_orcamento")
     private BigDecimal valorOrcamento;
 
-    @Column(name = "desconto_icms")
-    private BigDecimal descontoICMS;
+    @Column(name = "desconto_orcamento")
+    private BigDecimal descontoOrcamento;
 
     public void setQuantidadeItens(int quantidadeItens) {
         this.quantidadeItens = quantidadeItens;
@@ -33,7 +33,7 @@ public class OrcamentoModel implements Serializable {
         this.valorOrcamento = valorOrcamento;
     }
 
-    public void setDescontoICMS(BigDecimal descontoICMS) {
-        this.descontoICMS = descontoICMS;
+    public void setDescontoOrcamento(BigDecimal descontoOrcamento) {
+        this.descontoOrcamento = descontoOrcamento;
     }
 }

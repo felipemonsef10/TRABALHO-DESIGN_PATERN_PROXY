@@ -34,7 +34,7 @@ public class OrcamentoController {
         return ResponseEntity.ok(orcamentoService.cadastrarOrcamento(orcamentoModel));
     }
 
-    @PostMapping(path = "/put/{id}")
+    @PutMapping(path = "/put/{id}")
     public ResponseEntity<OrcamentoModel>atualizaOrcamento(@RequestBody OrcamentoModel orcamentoModel, @PathVariable Long id){
         OrcamentoModel orcamentoNewObj = orcamentoService.atualizaOrcamento(orcamentoModel, id);
         return ResponseEntity.ok().body(orcamentoNewObj);
