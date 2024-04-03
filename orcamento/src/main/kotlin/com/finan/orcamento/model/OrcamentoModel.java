@@ -24,12 +24,12 @@ public class OrcamentoModel implements Serializable {
     @Column(name = "desconto_orcamento")
     private BigDecimal descontoOrcamento;
 
-    public Long getId() {
-        return id;
-    }
+    public OrcamentoModel(){}
 
-    public void setId(Long id) {
-        this.id = id;
+    public OrcamentoModel(int qtdItens, BigDecimal valorOrcamento, BigDecimal descontoOrcamento) {
+        this.qtdItens = qtdItens;
+        this.valorOrcamento = valorOrcamento;
+        this.descontoOrcamento = descontoOrcamento;
     }
 
     public int getQtdItens() {
@@ -41,6 +41,11 @@ public class OrcamentoModel implements Serializable {
     }
 
     public BigDecimal getValorOrcamento() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return valorOrcamento;
     }
 
@@ -55,5 +60,4 @@ public class OrcamentoModel implements Serializable {
     public void setDescontoOrcamento(BigDecimal descontoOrcamento) {
         this.descontoOrcamento = descontoOrcamento;
     }
-
  }

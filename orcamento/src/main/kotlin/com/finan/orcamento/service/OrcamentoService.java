@@ -1,11 +1,11 @@
 package com.finan.orcamento.service;
 
 import com.finan.orcamento.model.OrcamentoModel;
+import com.finan.orcamento.model.OrcamentoProxy;
 import com.finan.orcamento.repositories.OrcamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +28,6 @@ public class OrcamentoService {
     }
 
     public OrcamentoModel cadastrarOrcamento(OrcamentoModel orcamentoModel) {
-        // calculaDesconto(orcamentoModel);
         return orcamentoRepository.save(orcamentoModel);
     }
 
@@ -42,10 +41,4 @@ public class OrcamentoService {
     public void deletaOrcamento(Long id) {
         orcamentoRepository.deleteById(id);
     }
-
-    /*public void calculaDesconto(OrcamentoModel orcamentoModel) {
-        BigDecimal valorInicialOrcamento = orcamentoModel.getValorOrcamento();
-        BigDecimal descontoOrcamento = orcamentoModel.getDescontoOrcamento();
-        orcamentoModel.setValorOrcamento(valorInicialOrcamento.subtract(descontoOrcamento));
-    }*/
 }
