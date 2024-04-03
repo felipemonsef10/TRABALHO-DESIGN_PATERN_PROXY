@@ -2,12 +2,11 @@ package com.finan.orcamento.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
+
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Getter
 @Entity
 @Table(name = "orcamento")
 public class OrcamentoModel implements Serializable {
@@ -25,15 +24,36 @@ public class OrcamentoModel implements Serializable {
     @Column(name = "desconto_orcamento")
     private BigDecimal descontoOrcamento;
 
-    public void setQuantidadeItens(int quantidadeItens) {
-        this.qtdItens = quantidadeItens;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getQtdItens() {
+        return qtdItens;
+    }
+
+    public void setQtdItens(int qtdItens) {
+        this.qtdItens = qtdItens;
+    }
+
+    public BigDecimal getValorOrcamento() {
+        return valorOrcamento;
     }
 
     public void setValorOrcamento(BigDecimal valorOrcamento) {
         this.valorOrcamento = valorOrcamento;
     }
 
+    public BigDecimal getDescontoOrcamento() {
+        return descontoOrcamento;
+    }
+
     public void setDescontoOrcamento(BigDecimal descontoOrcamento) {
         this.descontoOrcamento = descontoOrcamento;
     }
-}
+
+ }
