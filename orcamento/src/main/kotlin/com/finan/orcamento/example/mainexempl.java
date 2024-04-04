@@ -7,14 +7,14 @@ public class mainexempl {
     public static void main(String[] args) {
         //Sem proxy
         OrcamentoModel orcamentoModel = new OrcamentoModel();
-        System.out.println(orcamentoModel.getValorOrcamento());
-        System.out.println(orcamentoModel.getDescontoOrcamento());
-        System.out.println(orcamentoModel.getQtdItens());
+        System.out.println("Valor orçamento: " + orcamentoModel.getValorOrcamento());
+        System.out.println("Desconto orçamento: " + orcamentoModel.getDescontoOrcamento());
+        System.out.println("Quantidade de itens: " + orcamentoModel.getQtdItens());
 
         //Com proxy
         OrcamentoProxy proxy = new OrcamentoProxy(orcamentoModel);
-        System.out.println(proxy.getValorOrcamento());
-        System.out.println(proxy.getDescontoOrcamento());
-        System.out.println(proxy.getQtdItens());
+        System.out.println("Valor orçamento: " + proxy.getValorOrcamento());
+        System.out.println("Desconto orçamento: " + proxy.getDescontoOrcamento());
+        System.out.println("Quantidade de itens: " + proxy.getQtdItens());
     }
 }
